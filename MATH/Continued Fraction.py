@@ -3,6 +3,15 @@ def fractions(a, b):
     q = a//b
     x = a - b * q
 
+    if x == 0:
+        final_lis.append(q)
+        return final_lis
+
+    if x == 1:
+        final_lis.append(q)
+        final_lis.append(b)
+        return final_lis
+
     while x != 1:
         q = a // b
         final_lis.append(q)
